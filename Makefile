@@ -1,4 +1,4 @@
-CC	= gcc -Wextra -Wall -Werror
+CC	= gcc -Wextra -Wall -Werror -g
 
 all	:
 	$(CC) server.c libft/libft.a -o serv
