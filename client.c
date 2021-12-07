@@ -49,4 +49,5 @@ int	main(int argc, char **argv)
 	sigaction(SIGUSR2, &sa, NULL);
 	while (str[i])
 		send_char_by_bit(str[i++], pid);
+	send_char_by_bit('\n', pid);
 }
