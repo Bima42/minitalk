@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tpauvret <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/09 14:26:08 by tpauvret          #+#    #+#             */
+/*   Updated: 2021/12/09 14:27:04 by tpauvret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
 void	send_char_by_bit(unsigned char c, int pid)
@@ -30,9 +42,9 @@ void	handler_client(int signal)
 
 int	main(int argc, char **argv)
 {
-	int	pid;
-	int	i;
-	char	*str;
+	int					pid;
+	int					i;
+	char				*str;
 	struct sigaction	sa;
 
 	if (argc != 3)

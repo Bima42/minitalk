@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tpauvret <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/09 14:27:42 by tpauvret          #+#    #+#             */
+/*   Updated: 2021/12/09 14:27:47 by tpauvret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
 int	calcul_power(int nb, int power)
@@ -28,13 +40,13 @@ void	handler(int signum, siginfo_t *siginfo, void *room)
 		return ;
 	}
 	current_bit++;
-		usleep(100);
+	usleep(100);
 	kill(siginfo->si_pid, SIGUSR2);
 }
 
-int main(void)
+int	main(void)
 {
-	int 			pid;
+	int					pid;
 	struct sigaction	sa;
 
 	sa.sa_sigaction = &handler;
